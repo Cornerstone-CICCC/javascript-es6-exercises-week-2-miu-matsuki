@@ -6,8 +6,18 @@ Instruction
 Create a function named sumLargestNumbers that will receive an array of numbers and return the sum of the two largest numbers in that array.
 */
 
+// const sumLargestNumbers = function (data) {
+//   // Put your solution here
+// };
+
+
+
 const sumLargestNumbers = function (data) {
-  // Put your solution here
+
+  let max1 = Math.max(...data);
+  let max2 = Math.max(...data.filter((num)=> num !== max1))  //not max1 Math.max(...[1, 2]) =>...（点々3つ）をつけると、配列の殻をピキッと割って Math.max(1, 2) にしてくれるから読める！
+
+  return max1 + max2;
 };
 
 console.log(sumLargestNumbers([1, 10])); // 11
