@@ -6,8 +6,12 @@ Create a function named conditionalSum that will be given an array of numbers an
 
 */
 
+//dificult: ⭐⭐⭐⭐⭐
 const conditionalSum = function (values, condition) {
-  // Your code here
+
+ return values
+ .filter((num)=> (condition === "even" ? num % 2 === 0 : num % 2 !== 0))
+ .reduce((total, curr) => total + curr,0);
 };
 
 console.log(conditionalSum([1, 2, 3, 4, 5], "even")); // 6
