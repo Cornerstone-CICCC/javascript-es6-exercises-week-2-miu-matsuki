@@ -5,8 +5,20 @@ Instruction
 Create a function named instructorWithLongestName that will receive an array of instructor objects, and return the object that has the longest name. If there are two instructors with the longest name, return the first one.
 */
 
+
+//dificult: ⭐⭐⭐⭐⭐
 const instructorWithLongestName = function (instructors) {
-  // Put your solution here
+  //tmp
+  let longestName = instructors[0];
+  //chk
+  for(const instructor of instructors){
+    //compare
+    if(instructor.name.length > longestName.name.length){
+      //update
+      longestName = instructor;
+    }
+  }
+  return longestName;
 };
 
 console.log(
