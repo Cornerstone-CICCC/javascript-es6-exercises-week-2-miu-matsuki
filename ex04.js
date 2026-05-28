@@ -11,13 +11,14 @@ const instructorWithLongestName = function (instructors) {
   //tmp
   let longestName = instructors[0];
   //chk
-  for(const instructor of instructors){
+  //for(const instructor of instructors){
+  instructors.forEach(instructor => {
     //compare
     if(instructor.name.length > longestName.name.length){
       //update
       longestName = instructor;
     }
-  }
+  });
   return longestName;
 };
 
