@@ -18,7 +18,35 @@ Use some sort of looping. Do Not use String.prototype.replace
 */
 
 const urlEncode = function (text) {
-  // Put your solution here
+
+let isStarted = false;
+let result = "";
+
+ // for last brank
+  const charArray = text.split("");
+  while(charArray[charArray.length-1] === " "){
+    //console.log(charArray)
+    charArray.pop();
+    //console.log(charArray)
+  }
+  
+
+  charArray.forEach((char, i) => {
+
+    // isStartedOn
+    if(char !== " "){
+      isStarted = true;
+    }
+    if(isStarted){
+      if(char === " "){
+        result += "%20";
+      }else{
+        result += char;
+      }
+    }    
+  });
+
+  return result;
 };
 
 console.log(urlEncode("cornerstone college")); //cornerstone%20college
