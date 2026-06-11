@@ -10,6 +10,25 @@ Create a function named camelCase that will convert a string to camel case, and 
 
 const camelCase = function (input) {
   // Your code here
+  
+  let isfirst = true;
+  let output = "";
+
+  return input
+  .split(" ")
+  .map((char)=>{
+    if(isfirst){
+      isfirst = false;
+      return char
+    }
+    else{
+      return char[0].toUpperCase() + char.slice(1)
+    }
+    //console.log(output) ;
+    
+  })
+  .join("")
+
 };
 
 console.log(camelCase("this is a string")); // thisIsAString
