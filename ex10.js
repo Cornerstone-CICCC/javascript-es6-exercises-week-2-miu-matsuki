@@ -15,11 +15,11 @@ const multiplicationTable = function (maxValue) {
   for(let cnt= 1; cnt <= maxValue; cnt++){
     
     for(let n=1; n<=maxValue; n++){
-      output += n *cnt + " ";
+      output += n *cnt + " "; // Feedback: avoid the extra space after each row value; build each row with values.join(" ").
     }
-    output += "\n"
+    output += "\n" // Feedback: do not add a trailing newline after the last row.
   }
-  console.log(output)
+  console.log(output) // Feedback: return the table string instead of only logging it.
 
 };
 

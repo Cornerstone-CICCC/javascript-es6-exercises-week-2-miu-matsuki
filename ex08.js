@@ -16,7 +16,7 @@ const repeatNumbers = function (data) {
         output += String(num[0])
       
       }
-      return output;
+      return output; // Feedback: do not return inside this loop; collect every repeated group and return outputParts.join(", ") after the loop.
       console.log(output);
     }
 };

@@ -13,7 +13,7 @@ const talkingCalendar = function (date) {
   const [year, month, day] = date.split("/");
 
   const months = [
-    "january", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
+    "january", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" // Feedback: month names should be capitalized, so use "January".
   ];
   const monthName = months[Number(month)-1]
   
@@ -29,7 +29,7 @@ const talkingCalendar = function (date) {
     dayunit = "rd"
   }
 
-  return `${monthName} ${daynum}${dayunit}, ${year}`
+  return `${monthName} ${daynum}${dayunit}, ${year}` // Feedback: this return format is right, but all month names must match exact capitalization.
 };
 
 console.log(talkingCalendar("2017/12/02")); // December 2nd, 2017
